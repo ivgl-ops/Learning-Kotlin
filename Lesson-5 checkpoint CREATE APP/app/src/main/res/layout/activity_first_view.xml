@@ -87,11 +87,12 @@
         tools:layout_editor_absoluteX="45dp" />
 
     <ProgressBar
-        android:id="@+id/Bar"
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="412dp"
         android:layout_height="29dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="81dp" />
+        android:progress="8"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        tools:layout_editor_absoluteX="-2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

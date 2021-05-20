@@ -12,8 +12,7 @@ class firstView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_view)
-        x = findViewById(R.id.Bar)
-        progressBar.max = 10000
+        x = findViewById(R.id.progressBar)
         val progress = 1000
         ObjectAnimator.ofInt(x, "progress", progress).setDuration(2000).start()
 

@@ -46,19 +46,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="213dp"
-        android:layout_height="54dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/button9"
         android:layout_width="213dp"
         android:layout_height="54dp"
-        android:text="Button"
+        android:layout_marginBottom="4dp"
+        android:onClick="onclickBtn1"
+        android:text="Нормальная"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,10 +60,32 @@
         android:id="@+id/button10"
         android:layout_width="213dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="172dp"
-        android:text="Button"
+        android:layout_marginBottom="56dp"
+        android:onClick="onclickBtn1"
+        android:text="Заниженная как девятка"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="213dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="onclickBtn1"
+        android:text="Высокая"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="231dp"
+        android:layout_height="232dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pic2_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
