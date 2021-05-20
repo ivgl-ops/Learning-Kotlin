@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     var sum:Int = GetNum()
     private var text: String = "Привет, $name, ты наш $sum пользователь"
     private var Tvtext: TextView? = null
+    val x = 10
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,10 @@ class MainActivity : AppCompatActivity() {
         Tvtext = findViewById(R.id.TvText)
         var sum:Int = GetNum()
         Tvtext?.setText(text)
-
+        if (x == 10)
+        {
+            Tvtext?.setText("число равно 10")
+        }
 
 
 }
