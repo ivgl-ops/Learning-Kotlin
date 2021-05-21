@@ -49,6 +49,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="500dp"
+        android:onClick="onclickBtn1"
         android:text="часто" />
 
     <Button
@@ -61,6 +62,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="570dp"
+        android:onClick="onclickBtn1"
         android:text="не думаю об этом" />
 
     <TextView
