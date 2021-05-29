@@ -1,20 +1,24 @@
 package ivangladko.quizapp
 
-import android.app.AlertDialog
+import android.R.attr.name
 import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.random.Random
 
 
 class FiveView : AppCompatActivity() {
+    companion object {
+        const val NOTIFICATION_ID = 101
+        const val CHANNEL_ID = "channelID"
+    }
     lateinit var billDateEditText: EditText
     var tvText: TextView? = null
 
@@ -23,62 +27,41 @@ class FiveView : AppCompatActivity() {
         setContentView(R.layout.activity_five_view3)
         // finding the button
         val showButton = findViewById<Button>(R.id.showInput)
-        tvText = findViewById<TextView>(R.id.textView12)
-        val tvText2 = findViewById<TextView>(R.id.tvText2)
         val userYear = findViewById<EditText>(R.id.editTextNumber)
 
         // finding the edit text
         val editText = findViewById<EditText>(R.id.editText)
+        val textTown = findViewById<EditText>(R.id.textTown)
         billDateEditText = findViewById(R.id.billDate_editText_billUpload)
 
         showDatePicker()
-
 
         // Setting On Click Listener
         showButton.setOnClickListener {
 
             // Getting the user input
-            val text = editText.text
+            val text = editText.text.length
             val number: Int = userYear.getText().toString().toInt()
-            if (editText == null)
+            val x = textTown.text.length
+            var counter = 0
+            var randDigit = 0
+            val user = (text * number) / x
+            if (user % 2 == 0)
             {
+                randDigit = (6..11).random()
+                val intent = Intent(this, LastView::class.java)
+                intent.putExtra("digit", randDigit)
+                startActivity(intent)
 
             }
-            if (userYear == null)
+            else
             {
-                throw Exception("Вы передали null заничение")
+                randDigit = (0..6).random()
+                val intent = Intent(this, LastView::class.java)
+                intent.putExtra("digit", randDigit)
+                startActivity(intent)
             }
-            var x = text.length
-            x = ((number * x)/x + 10) * 3 * x / 12
-
-           // кайфую наслождаюсь прохрачное море
-            //   шишки тропа
-            //   черные ласточки
-            //   как же я не навижу лошадей
-            //   Раздолбил дыру, любими спосами перелез залез
-            //    пил бы по чучуть и растягивал
-            //            убежал бы от него обошел
-            //     шел бы и оглядывался, чтобы не сбила машина или не упасть куда нибудь
-
-            // плита
-            // ребенок
-            // дверь
-            // звонок
-            // белье
-
-            // роскошь классно мне нравится 0
-            // клиника страх не приятное чувство боль -1
-            //        не страшно уютно средняя комната 0
-            // что то либо стресное либо наооборт  1
-
-            // самолет упал
-            // пострадали елки никто не погиб
-            // случайность
-
-
-
-
-            // Showing the user input
+         // Showing the user input
         }
 
     }
@@ -97,8 +80,6 @@ class FiveView : AppCompatActivity() {
             val myFormat = "dd/MM/yyyy" // mention the format you need
             val sdf = SimpleDateFormat(myFormat, Locale.US)
             billDateEditText.setText(sdf.format(cal.time))
-            var xor = billDateEditText.text.toString()
-            tvText?.setText(xor)
         }
 
         billDateEditText.setOnClickListener {
