@@ -8,14 +8,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="280dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="108dp"
+        android:layout_width="330dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="96dp"
         android:text="Как вы думаете, какая у вас самооценка?"
         android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar3" />
 
@@ -47,9 +46,9 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="213dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
         android:onClick="onclickBtn1"
         android:text="Нормальная"
         app:layout_constraintBottom_toTopOf="@+id/button10"
@@ -58,9 +57,9 @@
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="213dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
         android:onClick="onclickBtn1"
         android:text="Заниженная как девятка"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,9 +68,9 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="213dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
         android:onClick="onclickBtn1"
         android:text="Высокая"
         app:layout_constraintBottom_toTopOf="@+id/button9"
@@ -80,11 +79,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="231dp"
-        android:layout_height="232dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="232dp"
+        android:layout_height="203dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pic2_foreground" />
 

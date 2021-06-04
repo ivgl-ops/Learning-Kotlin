@@ -42,24 +42,24 @@
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="500dp"
         android:onClick="onclickBtn1"
         android:text="часто" />
 
     <Button
         android:id="@+id/button12"
-        android:layout_width="250dp"
+        android:layout_width="289dp"
 
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="65dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="570dp"
         android:onClick="onclickBtn1"

@@ -33,22 +33,22 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="229dp"
-        android:layout_height="69dp"
+        android:layout_width="183dp"
+        android:layout_height="52dp"
         android:layout_marginTop="152dp"
         android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar7"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <Button
         android:id="@+id/button13"
-        android:layout_width="407dp"
-        android:layout_height="63dp"
+        android:layout_width="353dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="156dp"
         android:onClick="onClickbtn1"
         android:text="В главное меню"
