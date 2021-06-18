@@ -14,7 +14,7 @@ class LoginActivity: AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     setContentView(R.layout.activity_login)
-
+      this.setTitle("Авторизация")
     login_button_login.setOnClickListener {
       performLogin()
     }

@@ -1,5 +1,6 @@
 package ivangaldko.kickthehabit
 
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -10,9 +11,11 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.setTitle("Меню")
         setContentView(R.layout.activity_main)
         verifyUserIsLogged()
     }
+
     private fun verifyUserIsLogged(){
         val uid = FirebaseAuth.getInstance().uid
         if (uid == null)

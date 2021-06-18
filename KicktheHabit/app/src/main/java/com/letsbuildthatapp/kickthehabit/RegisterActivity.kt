@@ -24,10 +24,11 @@ class RegisterActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_register)
-
+    this.setTitle("Регистрация")
     register_button_register.setOnClickListener {
       performRegister()
     }
+
 
     already_have_account_text_view.setOnClickListener {
       Log.d(TAG, "Try to show login activity")
