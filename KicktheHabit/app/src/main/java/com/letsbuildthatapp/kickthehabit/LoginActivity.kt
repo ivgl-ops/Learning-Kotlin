@@ -1,5 +1,6 @@
 package ivangaldko.kickthehabit
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -37,6 +38,8 @@ class LoginActivity: AppCompatActivity() {
           if (!it.isSuccessful) return@addOnCompleteListener
 
           Log.d("Login", "Successfully logged in: ${it.result.user.uid}")
+          intent = Intent(this, MainActivity::class.java)
+          startActivity(intent)
         }
         .addOnFailureListener {
           Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
