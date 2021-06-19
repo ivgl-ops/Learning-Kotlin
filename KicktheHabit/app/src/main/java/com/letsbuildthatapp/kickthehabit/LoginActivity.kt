@@ -14,14 +14,18 @@ class LoginActivity: AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     setContentView(R.layout.activity_login)
-      this.setTitle("Авторизация")
     login_button_login.setOnClickListener {
       performLogin()
     }
 
     back_to_register_textview.setOnClickListener{
-      finish()
+        intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
     }
+      back_to_register_textview2.setOnClickListener {
+          intent = Intent(this, RegisterActivity::class.java)
+          startActivity(intent)
+      }
   }
 
   private fun performLogin() {
@@ -29,7 +33,7 @@ class LoginActivity: AppCompatActivity() {
     val password = password_edittext_login.text.toString()
 
     if (email.isEmpty() || password.isEmpty()) {
-      Toast.makeText(this, "Please fill out email/pw.", Toast.LENGTH_SHORT).show()
+      Toast.makeText(this, "Пожалуйста проверьте логин и пароль", Toast.LENGTH_SHORT).show()
       return
     }
 
