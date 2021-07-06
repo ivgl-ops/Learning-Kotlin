@@ -7,6 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ivangladko.weatherapp.R
+import ivangladko.weatherapp.data.ApixuwaetherApiService
+import ivangladko.weatherapp.data.response.CurrentWeatherResponse
+import kotlinx.android.synthetic.main.current_weather_fragment.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CurrentWeatherFragment : Fragment() {
 
@@ -27,6 +33,13 @@ class CurrentWeatherFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(CurrentWeatherViewModel::class.java)
         // TODO: Use the ViewModel
-    }
+        val apiService = ApixuwaetherApiService()
 
+        GlobalScope.launch(Dispatchers.Main) {
+            val currentWeatherResponse = apiService?.getCurrentWeather("London")?.await()
+            if (currentWeatherResponse != null) {
+                textView.text = currentWeatherResponse.currentWeatherEntry.toString()
+            }
+        }
+    }
 }
