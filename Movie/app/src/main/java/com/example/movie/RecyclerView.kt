@@ -1,5 +1,6 @@
 package com.example.movie
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,8 +30,9 @@ class MoviesViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
     private val overview:TextView = itemView.findViewById(R.id.movie_overview)
     private val rating:TextView = itemView.findViewById(R.id.movie_rating)
 
+    @SuppressLint("SetTextI18n")
     fun bind(movie: Result) {
-        Glide.with(itemView.context).load("http://image.tmdb.org/t/p/w500${movie.poster_path}").into(photo)
+        Glide.with(itemView.context).load("https://image.tmdb.org/t/p/w500${movie.poster_path}").into(photo)
         title.text = "Title: "+movie.title
         overview.text = movie.overview
         rating.text = "Rating : "+movie.vote_average.toString()
