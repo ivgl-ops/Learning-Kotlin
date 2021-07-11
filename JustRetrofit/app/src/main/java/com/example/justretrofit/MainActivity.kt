@@ -24,11 +24,9 @@ class MainActivity : AppCompatActivity() {
             if(responce.isSuccessful){
                 android.util.Log.d("Responce", responce.body()?.title.toString())
                 textView.text = responce.body()?.title!!
-                textView1.text = responce.body()?.body!!
             }else{
                 Log.d("Respoce", responce.errorBody().toString())
                 textView.text = responce.code().toString()
-                textView1.text = responce.code().toString()
             }
 
         })

@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         val request = ServiceBuilder.buildService(TmdbEndpoints::class.java)
         val call = request.getMovies(getString(R.string.api_key))
-        val progress_bar = findViewById<ProgressBar>(R.id.progress_bar)
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        var progress_bar = findViewById<ProgressBar>(R.id.progress_bar)
+        var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         call.enqueue(object : Callback<PopularMovies>{
             override fun onResponse(call: Call<PopularMovies>, response: Response<PopularMovies>) {
                 if (response.isSuccessful){
