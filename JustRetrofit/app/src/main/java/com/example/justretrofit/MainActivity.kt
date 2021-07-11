@@ -17,19 +17,20 @@ class MainActivity : AppCompatActivity() {
         val repository = Repository()
         val viewModelFac = MainViewModelFacroty(repository)
         val textView = findViewById<TextView>(R.id.textView)
+        val textView1 = findViewById<TextView>(R.id.textView2)
         viewModel = ViewModelProvider(this, viewModelFac).get(MainViewModel::class.java)
         viewModel.getpost()
         viewModel.myResponce.observe(this, Observer { responce ->
             if(responce.isSuccessful){
-                Log.d("Responce", responce.body()?.userId.toString())
                 android.util.Log.d("Responce", responce.body()?.title.toString())
-                android.util.Log.d("Responce", responce.body()?.body.toString())
                 textView.text = responce.body()?.title!!
+                textView1.text = responce.body()?.body!!
             }else{
                 Log.d("Respoce", responce.errorBody().toString())
                 textView.text = responce.code().toString()
+                textView1.text = responce.code().toString()
             }
-            
+
         })
     }
 }
