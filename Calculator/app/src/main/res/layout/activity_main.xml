@@ -154,14 +154,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <Button
+            android:id="@+id/calc_eq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="="
-            android:id="@+id/calc_eq"
             android:onClick="onE"
-            android:textSize="20dp"
-            />
+            android:text="="
+            android:textSize="20dp" />
 
 
     </LinearLayout>
