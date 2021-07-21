@@ -7,45 +7,48 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextNumber7"
+        android:id="@+id/num1"
         android:layout_width="350dp"
         android:layout_height="54dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="75dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber8"
+        android:id="@+id/num2"
         android:layout_width="350dp"
         android:layout_height="54dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber7" />
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
 
     <EditText
-        android:id="@+id/editTextNumber9"
+        android:id="@+id/num3"
         android:layout_width="350dp"
         android:layout_height="54dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber8" />
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnClick"
         android:layout_width="389dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:text="Посчитать"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber9" />
+        app:layout_constraintTop_toBottomOf="@+id/num3" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
